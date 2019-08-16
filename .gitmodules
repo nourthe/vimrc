@@ -100,9 +100,6 @@
 [submodule "pack/nvim/opt/vim-hug-neovim-rpc"]
 	path = pack/nvim/opt/vim-hug-neovim-rpc
 	url = https://github.com/roxma/vim-hug-neovim-rpc
-[submodule "packs/python/start/SimpylFold"]
-	path = pack/python/start/SimpylFold
-	url = https://github.com/tmhedberg/SimpylFold
 [submodule "pack/theme/start/vim-airline"]
 	path = pack/theme/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
@@ -112,9 +109,6 @@
 [submodule "pack/theme/start/vim-dim"]
 	path = pack/theme/start/vim-dim
 	url = https://github.com/jeffkreeftmeijer/vim-dim
-[submodule "pack/ruby/start/vim-rails"]
-	path = pack/ruby/start/vim-rails
-	url = https://github.com/tpope/vim-rails
 [submodule "pack/deoplete/start/alchemist.vim"]
 	path = pack/deoplete/start/alchemist.vim
 	url = https://github.com/slashmili/alchemist.vim
