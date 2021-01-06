@@ -19,10 +19,37 @@ Plug 'jceb/vim-orgmode'
 
 " Syntax check
 Plug 'dense-analysis/ale'
+" Languages
+Plug 'sheerun/vim-polyglot'
+" Auto pair
+Plug 'tmsvg/pear-tree'
+" Autocomplete
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Vim Commentary
+Plug 'tpope/vim-commentary'
+" Vim surround
+Plug 'tpope/vim-surround'
+" Vim documentations
+Plug 'Shougo/echodoc.vim'
+" Vim Git
+Plug 'airblade/vim-gitgutter'
+
 " Airline
 "Plug 'vim-airline/vim-airline'
+
+
 "Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location
+" list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" Use `[e` and `]e` to navigate Ale wraps
+nmap <silent> [e <Plug>(ale_previous_wrap)
+nmap <silent> ]e <Plug>(ale_next_wrap)
 
 
 " Install vim-plug
@@ -36,6 +63,14 @@ endif
 " +--------+
 " | Config |
 " +--------+
+" GLOBAL MAPS
+" Make Y effect to end of line instead of whole line
+nmap Y y$
+" Copy to system clipboard in Visual Mode
+vnoremap <C-c> "+y
+" Paste from system clipboard Insert Mode
+inoremap <C-v> <C-o>:set paste<CR><C-r>+<C-o>:set nopaste<CR>
+
 
 " Enable filetype
 filetype indent plugin on
@@ -56,10 +91,10 @@ set encoding=utf-8          " always use unicode (god damnit, windows)
 set backspace=indent,eol,start " backspace always works on insert mode
 set hidden
 
-
 set noshowmode
 set laststatus=2        " always show powerline
 set wildmenu            " enable visual wildmenu
+set cmdheight=2         " give more space for displaying messages
 
 set nowrap              " don't wrap long lines
 set number              " show line numbers
@@ -72,6 +107,9 @@ set ignorecase
 set smartcase
 set shortmess-=S	" Show number of search occurrences
 set path+=**			" Search down into subfolders
+
+set updatetime=300      " make vim more responsive
+set signcolumn=number   " after 8.1.1564 vim merge signcol and numbercol
 
 " Digraphs https://www.branah.com/unicode-converter
 digraph NN 209

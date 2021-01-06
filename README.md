@@ -1,8 +1,4 @@
-# This repository is back!
-
-I'm moving back to vim from neovim. Reasons will be disclosde in the
-future, but it usually has to do with vim being still more ubiquous
-than neovim.
+# This repository is no more used.
 
 ---
 
